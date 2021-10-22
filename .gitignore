@@ -1,6 +1,10 @@
 .DS_Store
 node_modules/
 pydist/
+out/
+__pycache__/
+build/
+*.spec
 
 dist/
 yarn-error.log

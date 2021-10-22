@@ -10,6 +10,7 @@ app = web.Application()
 app.add_routes([web.get('/', handle),
                 web.get('/controlMouseAndKeyboard', controller.controlMouseAndKeyboard),
                 web.get('/t', controller.test),
+                web.get('/ws', controller.websocket_handler),
                 web.get('/{name}', handle)])
 
 if __name__ == '__main__':
