@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['py/api.py'],
-             pathex=['/Users/peace/repos/node/electron-quick-start-master'],
+             pathex=['/Users/peace/repos/node/autorobot'],
              binaries=[],
              datas=[],
              hiddenimports=[],

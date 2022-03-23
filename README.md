@@ -1,45 +1,24 @@
-# electron-quick-start
+# AutoRobot
 
-**Clone and run for a quick way to see Electron in action.**
+Electron 调用 Python 打造桌面应用的 Demo，主要通过 HTTP、WebSocket 建立两者的连接
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
+Demo 功能为调用 输入 x、y 坐标，程序会移动鼠标到屏幕的 x,y 位置。注意：需要授予应用控制权限，在 MacOS 下设置 偏好设置 -> 隐私 -> 辅助功能。
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+技术栈：NodeJS、Electron、Python、aiohttp（HTTP、WebSocket）、pyautogui（控制鼠标）
 
-A basic Electron application needs just these files:
+## 项目启动
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+启动命令：
 
 ```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
+# 安装 pyinstaller
+# pyInstaller: 版本 4.5.1
+# python: 版本 3.9.7
+pip install pyinstaller
+# 把 python 代码打包为可执行文件
+npm run build-python
+# 安装依赖
 npm install
-# Run the app
+# 启动开发环境
 npm start
 ```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
